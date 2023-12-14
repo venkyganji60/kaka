@@ -32,7 +32,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
         cursor-pointer 
         lg:hidden"
       >
-        <Icon size={28} color="white" />
+        <Icon size={28} color="red" />
       </div>
       <div
         className=" 
@@ -47,7 +47,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
         cursor-pointer
         items-center"
       >
-        <Icon size={24} color="white" />
+        <Icon size={24} color="red" />
 
         <p className="hidden lg:block text-red-950 text-xl">{label}</p>
       </div>
