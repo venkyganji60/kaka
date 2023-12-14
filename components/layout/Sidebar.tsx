@@ -49,6 +49,7 @@ const Sidebar = () => {
               label={item.label}
             />
           ))}
+          <SidebarItem onClick={() => {}} icon={BiLogOut} label="Logout" />
         </div>
       </div>
     </div>
