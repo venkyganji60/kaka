@@ -24,6 +24,32 @@ const SidebarTweetButton = () => {
       >
         <FaFeather size={24} color="red" />
       </div>
+      <div
+        className="
+        mt-6
+        hidden 
+        lg:block 
+        px-4
+        py-2
+        rounded-full
+        bg-sky-500
+        hover:bg-opacity-90 
+        cursor-pointer
+        transition
+        "
+      >
+        <p
+          className="
+            hidden 
+            lg:block 
+            text-center
+            font-semibold
+            text-red-700 
+            text-[20px]"
+        >
+          Tweet
+        </p>
+      </div>
     </div>
   );
 };
