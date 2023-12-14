@@ -3,6 +3,7 @@ import { BiLogOut } from "react-icons/bi";
 import { BsHouseFill, BsBellFill } from "react-icons/bs";
 import { FaUser } from "react-icons/fa";
 import SidebarLogo from "./SidebarLogo";
+import SidebarItem from "./SidebarItem";
 
 //import useCurrentUser from '@/hooks/useCurrentUser';
 
@@ -38,6 +39,16 @@ const Sidebar = () => {
       <div className="flex flex-col items-end">
         <div className="space-y-2 lg:w-[230px]">
           <SidebarLogo />
+          {items.map((item) => (
+            <SidebarItem
+              key={item.href}
+              //alert={item.alert}
+              //auth={item.auth}
+              href={item.href}
+              icon={item.icon}
+              label={item.label}
+            />
+          ))}
         </div>
       </div>
     </div>
