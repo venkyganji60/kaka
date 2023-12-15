@@ -1,12 +1,13 @@
-import useLoginModal from "@/hooks/useLoginModal";
-import { useCallback, useState } from "react";
-import Input from "../Input";
-import Modal from "../Modal";
-import useRegisterModal from "@/hooks/useRegisterModal";
 import axios from "axios";
+import { toast } from "react-hot-toast";
+import { useCallback, useState } from "react";
 import { signIn } from "next-auth/react";
 
-import { toast } from "react-hot-toast";
+import useLoginModal from "@/hooks/useLoginModal";
+import useRegisterModal from "@/hooks/useRegisterModal";
+
+import Input from "../Input";
+import Modal from "../Modal";
 
 const RegisterModal = () => {
   const loginModal = useLoginModal();
@@ -59,10 +60,10 @@ const RegisterModal = () => {
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Input
-        placeholder="Email"
-        onChange={(e) => setEmail(e.target.value)}
-        value={email}
         disabled={isLoading}
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <Input
         disabled={isLoading}
@@ -77,11 +78,11 @@ const RegisterModal = () => {
         onChange={(e) => setUsername(e.target.value)}
       />
       <Input
+        disabled={isLoading}
         placeholder="Password"
         type="password"
-        onChange={(e) => setPassword(e.target.value)}
         value={password}
-        disabled={isLoading}
+        onChange={(e) => setPassword(e.target.value)}
       />
     </div>
   );
@@ -93,11 +94,12 @@ const RegisterModal = () => {
         <span
           onClick={onToggle}
           className="
-            text-red-950 
+            text-white 
             cursor-pointer 
             hover:underline
           "
         >
+          {" "}
           Sign in
         </span>
       </p>
