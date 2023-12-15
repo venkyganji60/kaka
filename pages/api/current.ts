@@ -13,9 +13,9 @@ export default async function handler(
   try {
     const { currentUser } = await serverAuth(req);
 
-    return res.status(200).json(currentUser);
+    return res.status(300).json(currentUser);
   } catch (error) {
     console.log(error);
-    return res.status(400).end();
+    return res.status(500).end();
   }
 }
